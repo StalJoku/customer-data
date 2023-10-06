@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace CustomerData\App;
 
-use Jake\FileReader\Router;
-use Jake\FileReader\Controllers\FileUploadController;
+use CustomerData\App\Router;
+use CustomerData\App\Controllers\FileUploadController;
 
 $router = new Router();
 

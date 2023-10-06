@@ -2,7 +2,8 @@ version: '3.9'
 
 services:
   web:
-    image: mynginx:latest
+    image: nginx:latest
+    container_name: webserver
     ports:
       - '8080:80'
     volumes:
