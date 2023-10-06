@@ -6,13 +6,19 @@ namespace CustomerData\App\Models;
 
 class JsonDocumentReader implements DocumentReaderInterface
 {
+	private const TYPE = 'json';
+
 	/**
 	 * @param string $fileName
      * @return array
      */
 	public function readDocumentData(string $fileName): array
-	{			
-		$json = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/Documents/' . "customers.json");
+	{	
+		if (empty($fileName) || self::TYPE != pathinfo($fileName, PATHINFO_EXTENSION)) {
+			return [];
+		}
+
+		$json = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/Documents/' . $fileName);
 				 
 		$jsonDataArray = json_decode($json, true);
 
