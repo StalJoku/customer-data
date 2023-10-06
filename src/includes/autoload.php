@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @param string $class The fully-qualified class name.
  * @return void
