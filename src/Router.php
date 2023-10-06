@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jake\FileReader;
+namespace CustomerData\App;
 
 class Router 
 {

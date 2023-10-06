@@ -3,7 +3,7 @@
 require __DIR__ . '/includes/autoload.php';
 require __DIR__ . '/routes.php';
 
-use Jake\FileReader\Config\DotEnv;
+use CustomerData\App\Config\DotEnv;
 
 (new DotEnv(__DIR__ . '/.env'))->load();
 
